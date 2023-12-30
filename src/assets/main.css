@@ -1,0 +1,403 @@
+
+:root {
+  --primary-text-color: #707070;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #E2E5ED; 
+  padding: 5px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #21455E;
+  font-family: Helvetica, sans-serif;
+}
+
+.menu {
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0px 10px;
+}
+
+.menu-list>a:hover, #active {
+  padding-top: 7px;
+  border-top: 4px solid #0DABD8;
+  color: #21455E;
+  font-weight: bold;
+}
+
+/* Dropdown Button */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+      color: #0DABD8;
+      font-weight: bold;
+  }
+
+.dropdown:hover .dropdown-content{display: block;}
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  color: #21455E;
+}
+
+.hr {
+  height: 40px;
+  margin: 0 10px;
+  border-left: 1px solid #E2E5ED;
+}
+
+.main-profile {
+  display: flex;
+  align-items: center;
+}
+
+.main-profile .avatar {
+  color: #0DABD8;
+  margin: 4px;
+}
+
+.nav-bar{
+  display: none;
+}
+
+@media (max-width: 958px){
+  .nav-bar {
+      display: block;
+      text-align: right;
+      font-size: 2rem;
+      color: #21455E;
+  }
+
+  .menu {
+      display: none;
+  }
+
+  .profile {
+      display: none;
+  }
+
+  nav {
+      justify-content: space-between;
+  }
+}
+
+
+/* BODY  */
+.main-body-container {
+  display: flex;
+  color: #21455E;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #EBF2F6;
+  height: 1000px;
+  padding: 15px 5px;
+}
+
+.sidebar-container button {
+  margin: 10px;
+  padding: 13px;
+  padding-left: 35px;
+  font-size: 105%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+}
+.sidebar-container button i {
+  margin-right: 10px;
+}
+.sidebar-container #active {
+  background-color: #E2E5ED;
+  border-radius: 7px;
+  border: 1px solid #E2E5ED;
+}
+.sidebar-container button:hover {
+  background-color: #E2E5ED;
+  border-radius: 7px;
+  border: 1px solid #E2E5ED;
+}
+
+@media (max-width: 958px){
+  .sidebar-container {
+      display: none;
+  }
+}
+
+.mainbar-container {
+  padding: 22px 5%;
+  width: 80%;
+  color: var(--primary-text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.filters button {
+  margin: 5px;
+  border-radius: 15px;
+  padding: 8px 18px;
+  border: 1px solid #E2E5ED;
+}
+
+.filters>button>i {
+  margin-right: 5px;
+}
+
+.filterbtn {
+  color: var(--primary-text-color);
+  background-color: transparent;
+}
+
+.bluebtn {
+  background-color: #0DABD8;
+  color: white;
+}
+
+.redbtn {
+  background-color: #EF5350;
+  color: white;
+}
+
+.recordings-table{
+  padding: 20px 0px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+  max-width: 20rem;
+}
+
+tr .video {
+  width: 200px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.61);
+  color: var(--primary-text-color);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 25%;
+  min-width: 300px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #E2E5ED;
+  padding: 10px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-body {
+  padding:10%;
+}
+
+.modal-body select {
+  width: 100%;
+  margin: 7px 0;
+  padding: 10px;
+  border: 1px solid #E2E5ED;
+  border-radius: 6px;
+  color: var(--primary-text-color);
+  background-color: #EBF2F6;
+}
+
+/* The switch - the box around the slider */
+.toggle{
+  display: flex;
+  justify-content: space-between;
+  margin: 8% 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  /* left: 4px; */
+  /* bottom: 1px; */
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #0AD688;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0AD688;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.modal-body button {
+  background-color: #0DABD8;
+  color: white;
+  border-radius: 15px;
+  padding: 8px 60px;
+  border: 1px solid #E2E5ED;
+}
+
+
+/* RECORDING PAGE  */
+.record-container {
+  padding: 5% 25%;
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-text-color);
+}
+.record-container i {
+  color: #EE5951;
+}
+
+.record-field {
+  width: 100%;
+  height: 50vh;
+  background-color: #21455E;
+  margin: 10PX 0PX;
+  border-radius: 10PX;
+}
+
+
+.record-container button {
+  background-color: #0DABD8;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 70px;
+  margin-top: 4%;
+  border: 1px solid #E2E5ED;
+}
