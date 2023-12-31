@@ -183,6 +183,13 @@ nav {
   font-family: 'Poppins', sans-serif;
 }
 
+
+@media (max-width: 958px){
+  .mainbar-container {
+      width: 100%;
+  }
+}
+
 .filter-container {
   display: flex;
   justify-content: space-between;
@@ -233,6 +240,12 @@ td, th {
 
 tr .video {
   width: 200px;
+}
+
+@media (max-width: 958px){
+  th, td small {
+      display: none;
+  }
 }
 
 /* The Modal (background) */

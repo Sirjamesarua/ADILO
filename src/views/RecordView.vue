@@ -17,6 +17,7 @@ const initializeCameraStream = async () => {
     videoElement.srcObject = stream;
     videoElement.autoplay = true;
     videoElement.playsinline = true;
+    videoElement.style.height = '100%';
 
     videoContainer.appendChild(videoElement);
   } catch (error) {
@@ -37,3 +38,26 @@ onMounted(() => {
     <center><button @click="startRecording">Start recording</button></center>
   </div>
 </template>
+
+<style>
+.record-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.record-field {
+  width: 100%;
+  background-color: #21455E;
+  margin: 10px 0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
